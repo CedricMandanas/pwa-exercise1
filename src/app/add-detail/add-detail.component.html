@@ -1,0 +1,37 @@
+<div *ngIf="isInvalid">
+  <h3>Input Not valid. All fields must have a value.</h3>
+</div>
+<div>
+  <label>
+    Name:
+    <input #name />
+  </label>
+</div>
+<div>
+  <label>
+    Phone Number:
+    <input #phoneNumber />
+  </label>
+</div>
+<div>
+  <label>
+    Email Address:
+    <input #emailAddress />
+  </label>
+</div>
+<div>
+  <label>
+    Birthday:
+    <input type="date" #birthday />
+  </label>
+</div>
+<div>
+  <button (click)="add(name.value, phoneNumber.value, emailAddress.value, birthday.value)">
+    Add
+  </button>
+  <button (click)="goBack()">
+    Go Back
+  </button>
+</div>
+
+

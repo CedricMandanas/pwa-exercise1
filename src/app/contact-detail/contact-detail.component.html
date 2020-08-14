@@ -1,0 +1,33 @@
+<div *ngIf="contact">
+
+  <h2>{{contact.name | uppercase}} Details</h2>
+  <div><span>id: </span>{{contact.id}}</div>
+  <div>
+    <label>
+      Name:
+      <input [(ngModel)]="contact.name" placeholder="Name" />
+    </label>
+  </div>
+  <div>
+    <label>
+      Phone Number:
+      <input [(ngModel)]="contact.phoneNumber" placeholder="Phone Number" />
+    </label>
+  </div>
+  <div>
+    <label>
+      Email Address:
+      <input [(ngModel)]="contact.emailAddress" placeholder="Email Address" />
+    </label>
+  </div>
+  <div>
+    <label>
+      Birthday:
+      <input type="date" [(ngModel)]="contact.birthday" placeholder="Birthday" />
+    </label>
+  </div>
+
+</div>
+
+<button (click)="save()">save</button>
+<button (click)="goBack()">go back</button>
